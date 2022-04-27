@@ -1,9 +1,31 @@
 .flex-container{
     display: flex;
     height: 150px;
+    border: 2px solid black;
+    max-width: 300px;
 
 }
 .item{
     font-size: 24px;
     height: 50%;
+    text-align: center;
+    min-width:100px;
+    line-height: 50px;
+
+}
+.noWrap{
+    flex-wrap: nowrap;
+}
+.wrap{
+    flex-wrap:wrap ;
+}
+.green{
+    background-color: green;
+}
+
+.orange{
+    background-color: orange;
+}
+.blue{
+    background-color: blue;
 }
