@@ -9,13 +9,16 @@
     flex-flow: row nowrap;
 }
 .wrap{
-    flex-wrap: row wrap;
+    flex-flow: row wrap;
 }
 .wrap-reverse{
     flex-flow: row wrap-reverse;
 }
 .r-nowrap{
     flex-flow:row-reverse nowrap;
+}
+.r-wrap{
+    flex-flow: row-reverse wrap;
 }
 
 .item{
