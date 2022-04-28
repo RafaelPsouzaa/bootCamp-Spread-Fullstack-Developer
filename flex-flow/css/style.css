@@ -1,0 +1,13 @@
+.flex-container{
+    display: flex;
+}
+
+.item{
+    background-color: blueviolet;
+    margin: 5px;
+    color: aliceblue;
+    text-align: center;
+    width: 100px;
+    height: 50px;
+
+}
