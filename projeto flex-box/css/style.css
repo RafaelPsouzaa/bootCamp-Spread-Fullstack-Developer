@@ -9,7 +9,20 @@ header{
     height: 100px;
     display: flex;
     align-items: center;
+    color: #fff;
     
+}
+header .list-items{
+    display: flex;
+    max-width: 260px;
+    width: 100%;
+    justify-content: space-between;
+}
+.list-items li a {
+    color:#fff;
+}
+header .menu{
+    justify-content: space-between;
 }
 
 ul{
@@ -29,4 +42,17 @@ ul li a{
     max-width: 992px;
     margin: auto;
     width: 100%;
+}
+.apresentaçao{
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.apresentaçao .texto-apresentaçao{
+    min-width: 200px;
+}
+
+.texto-apresentaçao h1{
+    color: #122a57;
 }
