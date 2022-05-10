@@ -157,9 +157,13 @@ div img{
     flex-direction: column;
     min-height: 100vh;
 }
+planos h2{
+    font-size: 32px;
+}
 .list-planos{
     display: flex;
     align-items: flex-end;
+    justify-content: space-between;
 }
 .item-planos{
     flex: 1;
@@ -177,6 +181,8 @@ div img{
     font-size: 24px;
     flex-direction: column;
     margin-top: 20px;
+    padding-top: 50px;
+    /* parou em 05:00 */
 
 }
 .item-planos h3::after{
@@ -187,6 +193,10 @@ div img{
 }
 .item-planos ul{
     padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
 }
 .item-planos ul li{
     display: flex;
@@ -201,5 +211,4 @@ div img{
     background-color: #122a57;
     margin-right: 5px;
 
-/* 2:43 DE VIDEO */
 }
