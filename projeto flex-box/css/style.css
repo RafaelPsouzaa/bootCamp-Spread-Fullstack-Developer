@@ -165,7 +165,7 @@ div img{
     flex: 1;
     border: 5px solid #122a57;
     margin-right: 20px;
-    /*parei em 16:06 part2*/
+    max-width: 240px;
 }
 .item-planos .Btn{
     margin: auto;
@@ -176,6 +176,7 @@ div img{
     display: flex;
     font-size: 24px;
     flex-direction: column;
+    margin-top: 20px;
 
 }
 .item-planos h3::after{
@@ -186,4 +187,19 @@ div img{
 }
 .item-planos ul{
     padding: 10px 20px;
+}
+.item-planos ul li{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+}
+.item-planos ul li::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #122a57;
+    margin-right: 5px;
+
+/* 2:43 DE VIDEO */
 }
