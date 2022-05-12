@@ -1,13 +1,13 @@
 var currentNumberWrapper = document.getElementById('currentNumber');
 currentNumber = 0;
-function incremet(){
-    currentNumber = currentNumber - 0;
+function increment(){
+    currentNumber = currentNumber + 1;
     currentNumberWrapper.innerHTML = currentNumber;
 
 
 }
-function decremet(){
-    currentNumber = currentNumber - 0;
+function decrement(){
+    currentNumber = currentNumber - 1;
     currentNumberWrapper.innerHTML = currentNumber;
 
 
