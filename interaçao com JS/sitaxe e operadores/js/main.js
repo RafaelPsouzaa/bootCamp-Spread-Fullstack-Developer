@@ -1,6 +1,9 @@
 function comparaNumeros(num1,num2){
     const primeiraFrase = criaPrimeiraFrase(num1,
     num2);
+    const segundaFrase = criaSegundaFrase(num1,num2);
+
+    return`${primeiraFrase} ${segundaFrase}`
 }
 
 function criaPrimeiraFrase(num1,num2){
@@ -11,3 +14,21 @@ function criaPrimeiraFrase(num1,num2){
     }
     return `os numeros ${num1} e num2 ${saoIguais} são iguais`
 }
+function criaSegundaFrase(num1,num2){
+    const soma = num1 + num2;
+    let resultado10 = 'menor';
+    let resultado20 = 'menor';
+    const compara10 = soma > 10;
+    const compara20 = soma > 20;
+
+    if(comparada10){
+        resultado10 = 'maior'
+    }
+    if(compara20){
+        resultado20 = 'maior'
+    }
+
+    return `sua soma ${soma},que resultado ${resultado} que 10 é${resultado10}, que 20 é ${resultado20}`
+}
+
+console.log(comparaNumeros(1,2));
