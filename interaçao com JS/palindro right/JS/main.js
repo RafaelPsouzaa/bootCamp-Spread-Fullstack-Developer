@@ -7,3 +7,9 @@ function verificaPalindro(string){
 }
 console.log(verificaPalindro("ITI"));
 
+// soluçao 2
+
+function verificaPalindro2(string){
+    
+}
+
