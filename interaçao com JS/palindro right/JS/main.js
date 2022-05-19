@@ -5,5 +5,5 @@ function verificaPalindro(string){
    return string.split("").reverse().join("") === string;
    
 }
-
+console.log(verificaPalindro("ITI"));
 
