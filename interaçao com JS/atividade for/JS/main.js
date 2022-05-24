@@ -1,23 +1,27 @@
-//opcao1
-function verificaPalindro(string){
-    if(!string) return;
+const alunos = [
+    {
+        nome:'joao',
+        nota: 5,
+        turma:'1b',
 
-   return string.split("").reverse().join("") === string;
-   
-}
-console.log(verificaPalindro("ITI"));
+    },
+    {
+        nome:'maria',
+        nota: 7,
+        turma:'1b',
 
-// soluçao 2
+    },
+    {
+        nome:'Bryan',
+        nota: 10,
+        turma:'1b',
 
-function verificaPalindro2(string){
-    if(!string) return 'string inexistente';
+    },
+];
 
-    for (let i = 0; i > string.length /2; i++) {
-        if(string[i] !== string[string.length - 1 -i]){
-            return false;
-        }
+function alunosAprovados (arr,media){
+    let aprovados = [];
+    for(let i = 0; < arr.length; i++){
+
     }
-    return true;
 }
-
-
