@@ -21,7 +21,7 @@ const alunos = [
 
 function alunosAprovados (arr,media){
     let aprovados = [];
-    for(let i = 0; < arr.length; i++){
-
+    for(let i = 0; i < arr.length; i++){
+        console.log(aprovados);
     }
 }
