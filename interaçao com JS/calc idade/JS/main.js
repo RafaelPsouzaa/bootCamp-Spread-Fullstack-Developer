@@ -17,3 +17,5 @@ const animal = {
     idade:5,
     raca:"pastor"
 }
+
+console.log(calcularIdade(pessoa1,50));
