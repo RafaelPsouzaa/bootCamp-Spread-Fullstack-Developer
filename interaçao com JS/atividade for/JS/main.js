@@ -17,11 +17,24 @@ const alunos = [
         turma:'1b',
 
     },
+    {
+        nome:'Rafael',
+        nota: 5,
+        turma:'1b',
+
+    },
 ];
 
 function alunosAprovados (arr,media){
     let aprovados = [];
+
     for(let i = 0; i < arr.length; i++){
-        console.log(aprovados);
+        const {nota,nome} = arr[i];
+        if(nota >= media){
+            aprovados.push(nome);
+        }
     }
+    return aprovados;
 }
+
+console.log(alunosAprovados(alunos,7));
