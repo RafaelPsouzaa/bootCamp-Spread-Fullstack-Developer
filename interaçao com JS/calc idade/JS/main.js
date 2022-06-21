@@ -1,5 +1,5 @@
 function calcularIdade(anos){
-    return`Daqui  a ${anos} anos, ${this.nome}terá ${this.idade+anos} anos de idade`;
+    return `Daqui  a ${anos} anos, ${this.nome} terá ${this.idade + anos} anos de idade`;
 }
 
 const pessoa1 = {
@@ -18,4 +18,4 @@ const animal = {
     raca:"pastor"
 }
 
-console.log(calcularIdade(pessoa1,50));
+console.log(calcularIdade.apply(animal,[6]));
