@@ -8,10 +8,11 @@ const laranja ={
 
 function mapComThis(arr,thisArg){
     return arr.map(function(item){
-        item * this.value;
+       return item * this.value;
     },thisArg);
 }
 
 const nums = [1,2];
 
-console.log(mapComThis(nums));
+console.log('this-> maçã',mapComThis(nums,maca));
+console.log('this ->laranja',mapComThis(nums,laranja));
