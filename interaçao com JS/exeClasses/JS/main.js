@@ -19,6 +19,47 @@ class contaBancaria {
 
         return this._saldo;
     }
-
+    depositar(valor){
+        this._saldo = this._saldo - valor;
+        return this._saldo;
+    }
 }
-//04:30 video
+class contaCorrente{
+    constructor (agencia,numero,saldo,cartaoCredito){
+        super(agencia,numero,saldo)
+            this.tipoCC = 'Corrente';
+          this._cartaoCredito = cartaoCredito;
+        
+        
+    }
+    get cartaoCredito(){
+        return this._cartaoCredito;
+    }
+    set cartaoCredito(valor){
+        this._cartaoCredito = valor; 
+    }
+}
+class contaPoupança{
+    constructor (agencia,numero,saldo){
+        super(agencia,numero,saldo)
+            this.tipoCC = 'Poupança';
+            
+        
+        
+    }
+   
+}
+class contaUniversitaria{
+    constructor (agencia,numero,saldo){
+        super(agencia,numero,saldo)
+            this.tipoCC = 'Universitaria';
+        
+    }
+    sacar(valor){
+        if(valor > 500){
+            return 'operaçao negada ';
+        }
+        this._saldo = this._saldo - valor;
+    }
+   
+}
