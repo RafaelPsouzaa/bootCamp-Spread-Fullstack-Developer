@@ -1,9 +1,9 @@
 class contaBancaria {
-    constructor(agencia,numero,tipoCC,saldo){
+    constructor(agencia,numero,tipoCC){
         this.agencia = agencia;
         this.numero = numero;
         this.tipoCC = tipoCC;
-        this._saldo = saldo;
+        this._saldo = 0;
     }
     get saldo(){
         return this._saldo;
@@ -20,13 +20,13 @@ class contaBancaria {
         return this._saldo;
     }
     depositar(valor){
-        this._saldo = this._saldo - valor;
+        this._saldo = this._saldo + valor;
         return this._saldo;
     }
 }
-class contaCorrente{
-    constructor (agencia,numero,saldo,cartaoCredito){
-        super(agencia,numero,saldo)
+class contaCorrente extends contaBancaria{
+    constructor (agencia,numero,cartaoCredito){
+        super(agencia,numero);
             this.tipoCC = 'Corrente';
           this._cartaoCredito = cartaoCredito;
         
@@ -39,9 +39,9 @@ class contaCorrente{
         this._cartaoCredito = valor; 
     }
 }
-class contaPoupança{
-    constructor (agencia,numero,saldo){
-        super(agencia,numero,saldo)
+class contaPoupança extends contaBancaria{
+    constructor (agencia,numero){
+        super(agencia,numero);
             this.tipoCC = 'Poupança';
             
         
@@ -49,9 +49,9 @@ class contaPoupança{
     }
    
 }
-class contaUniversitaria{
-    constructor (agencia,numero,saldo){
-        super(agencia,numero,saldo)
+class contaUniversitaria extends contaBancaria{
+    constructor (agencia,numero){
+        super(agencia,numero);
             this.tipoCC = 'Universitaria';
         
     }
