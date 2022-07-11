@@ -11,13 +11,13 @@
  function changeText(){
         const lightMode = "light Mode";
         const darkMode =  "dark Mode";
-    if(body.classList.contains(darkModeClass )){
-        button.innerHTML('lightMode');
-        h1.innerHTML(darkMode + 'on');
+         if(body.classList.contains(darkModeClass)){
+        button.innerHTML= lightMode;
+        h1.innerHTML = darkMode + " on";
         return;
     }
     button.innerHTML('darkMode');
-    h1.innerHTML(lightMode + 'on');
+    h1.innerHTML(lightMode + " on");
  }
  const darkModeClass = 'dark-mode';
  const button = document.getElementById('mode-selector');
