@@ -18,7 +18,7 @@ interface veiculo{
             localStorage.setItem("patio",JSON.stringify(veiculos));
         }
 
-        function adicionar(veiculo:veiculo){
+        function adicionar(veiculo:veiculo,salva?:boolean){
             const row = document.createElement("tr");
             row.innerHTML = `<td>${veiculo.nome}</td>;
                 <td>${veiculo.placa}</td>;
@@ -26,7 +26,7 @@ interface veiculo{
                 <td><button class="delete" data-placa=" ${veiculo.placa}">X</button></td>`;
 
             $("#patio")?.appendChild(row);
-            salvar([...ler(),veiculo])
+           if(salva) salvar([...ler(),veiculo])
         }
         function remover(){
 
@@ -43,7 +43,7 @@ interface veiculo{
 
         return {ler,adicionar,remover,salvar,render}
     }   
-    
+    patio().render();
 
     $("#cadastrar")?.addEventListener("click",()=>{
         const nome = $("#nome")?.value;
@@ -54,6 +54,6 @@ interface veiculo{
             alert(" O nome e placa sao obrigatorios");
             return;
         }
-        patio().adicionar({nome,placa,entrada: new Date()});
+        patio().adicionar({nome,placa,entrada: new Date()},true);
     });
 })();
