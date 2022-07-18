@@ -11,14 +11,16 @@ interface veiculo{
     document.querySelector(query);
     function patio(){
         function ler(){
+            return localStorage.patio ? JSON.parse(localStorage.patio) :[];
 
         }
+
         function adicionar(veiculo:veiculo){
             const row = document.createElement("tr");
-            row.innerHTML = `<td>${veiculo.nome}</td>`;
-            row.innerHTML = `<td>${veiculo.placa}</td>`;
-            row.innerHTML = `<td>${veiculo.entrada}</td>`;
-            row.innerHTML = `<td><button class="delete data-placa= ${veiculo.placa}">X</button>/td>`;
+            row.innerHTML = `<td>${veiculo.nome}</td>;
+                <td>${veiculo.placa}</td>;
+                <td>${veiculo.entrada}</td>;
+                <td><button class="delete" data-placa=" ${veiculo.placa}">X</button></td>`;
 
             $("#patio")?.appendChild(row);
         }
