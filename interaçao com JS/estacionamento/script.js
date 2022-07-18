@@ -22,6 +22,11 @@
         function remover() {
         }
         function render() {
+            $("#patio").innerHTML = "";
+            const patio = ler();
+            if (patio.length) {
+                patio.forEach((veiculo) => adicionar(veiculo));
+            }
         }
         return { ler, adicionar, remover, salvar, render };
     }

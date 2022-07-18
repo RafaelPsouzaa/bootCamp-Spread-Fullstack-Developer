@@ -10,7 +10,7 @@ interface veiculo{
     const $ = (query:string): HTMLInputElement | null => 
     document.querySelector(query);
     function patio(){
-        function ler(){
+        function ler():veiculo[]{
             return localStorage.patio ? JSON.parse(localStorage.patio) :[];
 
         }
@@ -33,7 +33,12 @@ interface veiculo{
         }
         
         function render(){
+            $("#patio")!.innerHTML = "";
+            const patio = ler();
 
+            if(patio.length){
+                patio.forEach((veiculo)=>adicionar(veiculo))
+            }
         }
 
         return {ler,adicionar,remover,salvar,render}
