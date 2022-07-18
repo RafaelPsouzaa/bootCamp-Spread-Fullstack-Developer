@@ -14,6 +14,9 @@ interface veiculo{
             return localStorage.patio ? JSON.parse(localStorage.patio) :[];
 
         }
+        function salvar(veiculos: veiculo[]){
+            localStorage.setItem("patio",JSON.stringify(veiculos));
+        }
 
         function adicionar(veiculo:veiculo){
             const row = document.createElement("tr");
@@ -23,13 +26,12 @@ interface veiculo{
                 <td><button class="delete" data-placa=" ${veiculo.placa}">X</button></td>`;
 
             $("#patio")?.appendChild(row);
+            salvar([...ler(),veiculo])
         }
         function remover(){
 
         }
-        function salvar(){
-
-        }
+        
         function render(){
 
         }
