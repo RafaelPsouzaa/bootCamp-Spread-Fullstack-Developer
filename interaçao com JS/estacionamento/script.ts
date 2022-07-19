@@ -51,6 +51,7 @@ interface veiculo{
             const {entrada,nome} = ler().find(
                 (veiculo) => veiculo.placa === placa
                 );
+                //12:20 do video
 
             const tempo = calcTempo( new Date().getTime() - new Date( entrada).getTime());
             
@@ -85,6 +86,6 @@ interface veiculo{
             alert(" O nome e placa sao obrigatorios");
             return;
         }
-        patio().adicionar({nome,placa,entrada: new Date()},true);
+        patio().adicionar({nome,placa,entrada: new Date().toISOString()},true);
     });
 })();
