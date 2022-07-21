@@ -31,8 +31,9 @@
         }
         function remover(placa) {
             const { entrada, nome } = ler().find((veiculo) => veiculo.placa === placa);
+            //12:20 do video
             const tempo = calcTempo(new Date().getTime() - new Date(entrada).getTime());
-            if (!confirm(`o veiculo ${nome}permaneceu por ${tempo}.Deseja Encerrar`))
+            if (!confirm(`o veiculo ${nome}permaneceu por ${tempo}.Deseja Encerrar?`))
                 return;
             salvar(ler().filter((veiculo) => veiculo.placa !== placa));
             render();
@@ -55,6 +56,6 @@
             alert(" O nome e placa sao obrigatorios");
             return;
         }
-        patio().adicionar({ nome, placa, entrada: new Date() }, true);
+        patio().adicionar({ nome, placa, entrada: new Date().toISOString() }, true);
     });
 })();
